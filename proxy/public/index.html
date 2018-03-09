@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+  <link href="http://localhost:3003/dist/bundle.css" rel="stylesheet">
+<!-- <link rel="shortcut icon" type="image/png" href="/favicon.png"/> -->
+<link rel="icon" type="image/png" href="./photos/favicon-16x16.png" sizes="16x16" />
+  <title>SEA BNB</title>
+</head>
+
+<body>
+  <div id="main">
+    <div class='top'>
+      <div class= 'logo'>
+         <img src="./photos/logo.png" style="width:30px">
+
+      </div>
+
+      <ul class="ul">
+        <li> Become a host </li>
+        <li> Help </li>
+        <li> Sign Up </li>
+        <li> Log In</li>
+      </ul>
+    </div>
+    <div class="boat-photos">
+      <div class="b-photos" style="max-width:1400px">
+        <img class="mySlides" src="./photos/b4.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b1.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b2.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b3.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b5.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b6.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b7.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b8.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b9.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b10.jpg" style="width:100%">
+        <img class="mySlides" src="./photos/b11.jpg" style="width:100%">
+      </div>
+    </div>
+    <div class="section1">
+      <div class='sectionA'>
+        <div id="amenities"></div>
+        <div id="reviews"></div>
+      </div>
+      <div class='sectionB'>
+        <div id="bookings"></div>
+      </div>
+    </div>
+    <div class="section2">
+      <div id="similar-listings"></div>
+    </div>
+  </div>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <link href="http://localhost:3001/dist/bundle.css" rel="stylesheet"></link>
+  <script src="http://localhost:3001/dist/bundle.js"></script>
+  <script src="http://localhost:3002/index_bundle.js"></script>
+  <script src="http://localhost:3003/dist/bundle.js"></script>
+  <script src="http://localhost:3004/bundle.js"></script>
+  <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+  <script>
+    const listingID = parseInt(window.location.pathname.split('/')[2], 10) || Math.floor(math.random() * 200)
+    ReactDOM.render(
+      React.createElement(Amenities, { id: listingID }),
+      document.getElementById('amenities')
+    );
+    ReactDOM.render(
+      React.createElement(Bookings),
+      document.getElementById('bookings')
+    );
+    ReactDOM.render(
+      React.createElement(SimilarListings, { id: listingID }),
+      document.getElementById('similar-listings')
+    );
+    // ReactDOM.render(
+    //   React.createElement(Reviews),
+    //   document.getElementById('reviews')
+    // );
+  </script>
+  <script>
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
+</html>

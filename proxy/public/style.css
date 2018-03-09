@@ -1,0 +1,123 @@
+/*#iteminfo {
+  display: block;
+}
+
+#countdown {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+#related {
+  margin: 10%;
+  display: block;
+}*/
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.top {
+  height: 90px;
+  width: 1400px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 90px;
+  width: 505px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.search {
+  display: flex;
+
+}
+
+.ul {
+  color: #666666;
+  display: flex;
+  height: 95px;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.boat-photos {
+
+  height: 500px;
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.b-photos {
+  width: 1400px;
+
+}
+#main {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
+.section1{
+  display: flex;
+  width: 1046px;
+  margin-top: 30px;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #d8d8d8;
+  border-width: 2px;
+  padding-top: 20px;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+
+}
+.section2 {
+  width: 80vw;
+}
+.sectionA{
+  display: flex;
+  flex-direction: column;
+  width: 619px;
+}
+.sectionB{
+  width: 405px;
+
+  top: 500px;
+  display: flex;
+
+}
+#amenities {
+  width: 610px;
+  margin-bottom: 50px;
+}
+#reviews {
+  width: 310px;
+}
+#bookings {
+  /*//color: #FFF;*/
+  color: grey;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  height: 340px;
+  width: 400px;
+}
+
+#similar-listings {
+  margin-bottom: 20px;
+}
