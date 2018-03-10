@@ -50,6 +50,12 @@ body {
   font-size: 12px;
   margin-right: 20px;
 }
+
+.ul li:hover {
+
+  border-bottom: 2px solid grey;
+text-decoration: none;
+}
 .boat-photos {
 
   height: 500px;
